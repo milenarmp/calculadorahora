@@ -53,7 +53,15 @@
             Label:
                 text: root.horariosaida
 
-        Button:
-            text:"Somar"
-            background_color: hex('#83f1a9')
-            on_press: root.btn()
+        GridLayout:
+            cols:2
+
+            Button:
+                text:"Somar"
+                background_color: hex('#009a2a')
+                on_press: root.btnSomar()
+
+            Button:
+                text:"Subtrair"
+                background_color: hex('#c63333')
+                on_press: root.btnSubtrair()
