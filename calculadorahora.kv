@@ -3,6 +3,8 @@
 <TelaInicial>:
     hora : hora
     minuto : minuto
+    somahora : somahora
+    minutosoma : minutosoma
     canvas:
         Color:
             rgba: hex('#126717')
@@ -11,11 +13,11 @@
             pos: self.pos
 
     GridLayout:
-        cols:1
+        rows:3
         size: root.width, root.height
 
         GridLayout:
-            cols:2
+            cols:4
 
             Label:
                 text: "Hora Inicio: "
@@ -32,7 +34,21 @@
                 multiline:False
 
             Label:
-                text: "Horario de saida: "
+                text: "Hora Soma: "
+
+            TextInput:
+                id: somahora
+                multiline:False
+
+            Label:
+                text: "Minuto Soma: "
+
+            TextInput:
+                id: minutosoma
+                multiline:False
+
+            Label:
+                text: "Total: "
 
             Label:
                 text: root.horariosaida
