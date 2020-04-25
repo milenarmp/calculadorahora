@@ -1,0 +1,43 @@
+#:kivy 1.11.1
+#:import hex kivy.utils.get_color_from_hex
+<TelaInicial>:
+    hora : hora
+    minuto : minuto
+    canvas:
+        Color:
+            rgba: hex('#126717')
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "Hora Inicio: "
+
+            TextInput:
+                id: hora
+                multinline:False
+
+            Label:
+                text: "Minuto Inicio: "
+
+            TextInput:
+                id: minuto
+                multiline:False
+
+            Label:
+                text: "Horario de saida: "
+
+            Label:
+                text: root.horariosaida
+
+        Button:
+            text:"Somar"
+            background_color: hex('#83f1a9')
+            on_press: root.btn()
