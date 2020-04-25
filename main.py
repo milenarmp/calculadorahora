@@ -11,7 +11,7 @@ class TelaInicial(Widget):
     horariosaida = StringProperty()
     somahora = ObjectProperty(None)
     minutosoma = ObjectProperty(None)
-
+    # método para somar
     def btnSomar(self):
         if len(self.hora.text) > 0 and len(self.minuto.text) > 0 and len(self.somahora.text) > 0 and len(self.minutosoma.text) > 0:
             inicio = datetime.datetime(2020, 1, 1, int(self.hora.text), int(self.minuto.text), 00, 000000)
@@ -22,6 +22,7 @@ class TelaInicial(Widget):
         else:
             self.horariosaida = 'Formato inválido!'
 
+    # método para subtrair
     def btnSubtrair(self):
         if len(self.hora.text) > 0 and len(self.minuto.text) > 0 and len(self.somahora.text) > 0 and len(self.minutosoma.text) > 0:
             inicio = datetime.datetime(2020, 1, 1, int(self.hora.text), int(self.minuto.text), 00, 000000)
